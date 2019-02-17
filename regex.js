@@ -383,16 +383,45 @@ var locationE = new RegExp('<td class="">.*<\/td>', 'g')
 var regexObjLec = locationE.exec(HTMLContent);
 var regexObjDis = locationE.exec(HTMLContent);
 
-//console.log(HTMLContent.substr(regexObjL.index + 13, regexObjL[0].length - 18));
+//lecture days
+var lecDays = new RegExp('<td class="centerColumn">[^\/]*\/', 'g')
+var regexLDays = lecDays.exec(HTMLContent);
+var partialDays = "";
+var parDays = new RegExp('<');
+var regexLFD = "";
+var parDays2 = new RegExp('>');
+var regexLFD2 = "";
+
+// discussion days
+var regexDDays = lecDays.exec(HTMLContent);
+var partialDDays = "";
+var regexDFD = "";
+var regexDFD2 = "";
+
+//lecture time
 
 // schedule will have alternating course name and description
 while (regexObjE !== null && regexObjS !== null && regexDesE !== null && regexDesS !== null) {
+
+    // Preprocessing
+    partialDays = (HTMLContent.substr(regexLDays.index + regexLDays[0].length - 13, 20));
+    regexLFD = parDays.exec(partialDays);
+    regexLFD2 = parDays2.exec(partialDays);
+    partialDDays = (HTMLContent.substr(regexDDays.index + regexDDays[0].length - 13, 20));
+    regexDFD = parDays.exec(partialDDays);
+    regexDFD2 = parDays2.exec(partialDDays);
+
+    //Constructing the object
     courseInfo.push({
         "title": HTMLContent.substr(regexObjS.index + 3, regexObjE.index - regexObjS.index - 2) + " " +
             HTMLContent.substr(regexDesS.index + 3, regexDesE.index - regexDesS.index - 2),
-            "locationLec": HTMLContent.substr(regexObjLec.index + 13, regexObjLec[0].length - 18),
-            "locationDis": HTMLContent.substr(regexObjDis.index + 13, regexObjDis[0].length - 18),
-        });
+        "locationLec": HTMLContent.substr(regexObjLec.index + 13, regexObjLec[0].length - 18),
+        "locationDis": HTMLContent.substr(regexObjDis.index + 13, regexObjDis[0].length - 18),
+        "LecDays": partialDays.substr(0, regexLFD.index).substr(regexLFD2.index + 1, 10),
+        "DisDays": partialDDays.substr(0, regexDFD.index).substr(regexDFD2.index + 1, 10),
+    });
+
+
 
     regexObjS = courseTitleS.exec(HTMLContent);
     regexObjE = courseTitleE.exec(HTMLContent);
@@ -400,6 +429,9 @@ while (regexObjE !== null && regexObjS !== null && regexDesE !== null && regexDe
     regexDesE = courseTitleE.exec(HTMLContent);
     regexObjLec = locationE.exec(HTMLContent);
     regexObjDis = locationE.exec(HTMLContent);
+
+    regexLDays = lecDays.exec(HTMLContent);
+    regexDDays = lecDays.exec(HTMLContent);
 }
 
 
@@ -410,6 +442,8 @@ courseInfo = courseInfo.map((e) => {
         title: e.title.substr(0, regexObjDash.index - 1),
         locationLec: e.locationLec,
         locationDis: e.locationDis,
+        LecDays: e.LecDays,
+        DisDays: e.DisDays,
     };
 })
 
@@ -419,14 +453,4 @@ console.log(courseInfo)
 
 
 
-{/* <td class="centerColumn"> <a class="uit-clickover-bottom" data-content="Thursday" data-original-title="" title="" style="cursor: pointer;">R</a></td>
-<td>1pm-1:50pm</td>
-<td class="">Mathematical Sciences 6229</td>
-<td class="hide-small centerColumn">0.0</td>
-<td class="hide-small">Zheng, A.</td>
-</tr> */}
-
-//course location
-//var locationS = new RegExp('<td class="">', g);
-
- //   ));
+console.log();
