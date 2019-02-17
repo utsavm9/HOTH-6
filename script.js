@@ -13,7 +13,7 @@ window.addEventListener('load', function load(event) {
     document.getElementById('scanbutton').onclick = function () {
         func();
         chrome.storage.sync.get(["currentTabURL"], function(result){
-		console.log("URL of current Tab: " + result.currentTabURL);
+		alert("URL of current Tab: " + result.currentTabURL);
 	});
     };
 });
