@@ -1,1 +1,3 @@
-console.log("This works!!!");
+function scan() {
+    console.log("This works!!!");
+}
