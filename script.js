@@ -132,6 +132,7 @@ window.addEventListener('load', function load(event) {
 
             console.log(courseInfo);
             alert(courseInfo);
+            document.body.appendChild(document.createTextNode("Click to see extracted information:"));
 
             var list = document.createElement('ul');
             courseInfo.forEach((e) => {
@@ -140,12 +141,7 @@ window.addEventListener('load', function load(event) {
                 
                 tagSubject.onclick = function () {
                     
-                    var att = document.createAttribute("data-toggle");       // Create a "class" attribute
-                    att.value = "modal";                           // Set the value of the class attribute
-                    var att2 = document.createAttribute("data-target");       // Create a "class" attribute
-                    att2.value = "#exampleModal";                           // Set the value of the class attribute
-                    tagSubject.setAttributeNode(att);
-                    tagSubject.setAttributeNode(att2);
+                    alert(e.title + ":\n" + "sss");
 
                 }
                 list.appendChild(tagSubject)
