@@ -149,7 +149,7 @@ window.addEventListener('load', function load(event) {
                 list.appendChild(tagSubject)
             })
 
-            document.body.appendChild(list);
+            document.getElementById('pasteHere').appendChild(list);
 
             // let addToCalendarB = document.createElement('button');
             // addToCalendarB.className += " btn btn-sharp2";
