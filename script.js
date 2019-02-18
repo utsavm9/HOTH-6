@@ -129,7 +129,7 @@ window.addEventListener('load', function load(event) {
             })
 
 
-
+            console.log(courseInfo);
             alert(courseInfo);
 
 
