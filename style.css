@@ -21,4 +21,5 @@
 kbd {
     font-size: 18px;
     margin-bottom: 7px;
+    white-space: nowrap
 }
