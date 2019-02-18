@@ -151,19 +151,17 @@ window.addEventListener('load', function load(event) {
 
             document.getElementById('pasteHere').appendChild(list);
 
-           // https://calendar.google.com/calendar/r/eventedit?text=Computer+Science+32&dates=20190108T063000Z/20190108T075000Z&details=Lec+-+MW+|+Dis+-+F&location=Boelter+Hall,+CA+90024
-
             let addToCalendarB = document.createElement('button');
             addToCalendarB.className += " btn btn-sharp2";
             addToCalendarB.appendChild(document.createTextNode("Add to Calendar"));
 
             
             var att = document.createAttribute("href"); 
-            att.value = "https://calendar.google.com/calendar/r/eventedit?text=Computer+Science+32&dates=20190108T063000Z/20190108T075000Z&details=Lec+-+MW+|+Dis+-+F&location=Boelter+Hall,+CA+90024";                           // Set the value of the class attribute
+            att.value = `https://calendar.google.com/calendar/r/eventedit?text=Computer+Science+32&dates=20190108T063000Z/20190108T075000Z&details=Lec+-+MW+|+Dis+-+F&location=Boelter+Hall,+CA+90024`;                           // Set the value of the class attribute
             addToCalendarB.setAttributeNode(att);
 
             document.body.appendChild(addToCalendarB);
-            document.body.appendChild(document.createTextNode(""));
+
         });
     };
 });
