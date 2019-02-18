@@ -13,7 +13,7 @@ window.addEventListener('load', function load(event) {
                 return document.getElementById("div_landing").innerHTML;
             }
             else {
-                return ("Invalid Website. Please go to https://be.my.ucla.edu/studylist.aspx to use.");
+                alert ("Invalid Website. Please go to https://be.my.ucla.edu/studylist.aspx to use.");
             }
         }
 
