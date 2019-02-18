@@ -1,3 +1,4 @@
+var moment = require('moment');
 console.log("Started this...")
 
 const HTMLContent = `<div id="div_landing">
