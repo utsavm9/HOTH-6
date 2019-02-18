@@ -1,6 +1,7 @@
 
 
 window.addEventListener('load', function load(event) {
+    
     document.getElementById('scanbutton').onclick = function () {
         console.log("Popup DOM fully loaded and parsed");
 
@@ -136,6 +137,9 @@ window.addEventListener('load', function load(event) {
             courseInfo.forEach((e) => {
                 let tagSubject = document.createElement('li');
                 tagSubject.appendChild(document.createTextNode(e.title));
+                tagSubject.onclick = function () {
+                    alert(e.title);
+                }
                 list.appendChild(tagSubject)
             })
 
