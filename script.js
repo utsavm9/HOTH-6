@@ -125,7 +125,7 @@ window.addEventListener('load', function load(event) {
                     LecTimeL: e.LecTime.substr(regexLT.index + 1, 10),
                     DisTimeS: e.DisTime.substr(0, regexDT.index),
                     DisTimeL: e.DisTime.substr(regexDT.index + 1, 10),
-                    FinalTime : e.FinalTime,
+                    FinalTime: e.FinalTime,
                 };
             })
 
@@ -138,12 +138,12 @@ window.addEventListener('load', function load(event) {
             courseInfo.forEach((e) => {
                 let tagSubject = document.createElement('li');
                 tagSubject.appendChild(document.createTextNode(e.title));
-                
+
                 tagSubject.onclick = function () {
-                    
+
                     alert(e.title + ":\n" + "Lecture information: " + e.locationLec
-                    + "\nTime: " + e.LecDays + " at " + e.LecTimeS + "-" + e.LecTimeL + "\nDiscussion Information: "
-                    + e.locationDis + "\nTime: " + e.DisDays + " at " + e.DisTimeS + "-" + e.DisTimeL);
+                        + "\nTime: " + e.LecDays + " at " + e.LecTimeS + "-" + e.LecTimeL + "\nDiscussion Information: "
+                        + e.locationDis + "\nTime: " + e.DisDays + " at " + e.DisTimeS + "-" + e.DisTimeL);
 
                 }
                 list.appendChild(tagSubject)
@@ -151,11 +151,19 @@ window.addEventListener('load', function load(event) {
 
             document.getElementById('pasteHere').appendChild(list);
 
-            // let addToCalendarB = document.createElement('button');
-            // addToCalendarB.className += " btn btn-sharp2";
-            // addToCalendarB.appendChild(document.createTextNode("Add to Calendar"));
-            // document.body.appendChild(addToCalendarB);
-            // document.body.appendChild(document.createTextNode(""));
+           // https://calendar.google.com/calendar/r/eventedit?text=Computer+Science+32&dates=20190108T063000Z/20190108T075000Z&details=Lec+-+MW+|+Dis+-+F&location=Boelter+Hall,+CA+90024
+
+            let addToCalendarB = document.createElement('button');
+            addToCalendarB.className += " btn btn-sharp2";
+            addToCalendarB.appendChild(document.createTextNode("Add to Calendar"));
+
+            
+            var att = document.createAttribute("href"); 
+            att.value = "https://calendar.google.com/calendar/r/eventedit?text=Computer+Science+32&dates=20190108T063000Z/20190108T075000Z&details=Lec+-+MW+|+Dis+-+F&location=Boelter+Hall,+CA+90024";                           // Set the value of the class attribute
+            addToCalendarB.setAttributeNode(att);
+
+            document.body.appendChild(addToCalendarB);
+            document.body.appendChild(document.createTextNode(""));
         });
     };
 });
