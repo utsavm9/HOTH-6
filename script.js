@@ -143,6 +143,7 @@ window.addEventListener('load', function load(event) {
             addToCalendarB.className += " btn btn-sharp";
             addToCalendarB.appendChild(document.createTextNode("Add to Calendar"));
             document.body.appendChild(addToCalendarB);
+            document.body.appendChild(document.createTextNode(""));
         });
     };
 });
