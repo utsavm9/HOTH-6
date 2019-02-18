@@ -459,7 +459,7 @@ courseInfo = courseInfo.map((e) => {
         LecTimeL: e.LecTime.substr(regexLT.index + 1, 10),
         DisTimeS: e.DisTime.substr(0, regexDT.index),
         DisTimeL: e.DisTime.substr(regexDT.index + 1, 10),
-        FinalTime : e.FinalTime,
+        //FinalTime : e.FinalTime,
     };
 })
 
