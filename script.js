@@ -23,9 +23,10 @@ window.addEventListener('load', function load(event) {
 	        //Here we have just the innerHTML and not DOM structure
 	        console.log('Popup script:')
 	        alert(results[0]);
-	        let element = document.createElement('button');
-	        element.appendChild(document.createTextNode("Add to Calendar"));
-			document.body.appendChild(element);
+            let addToCalendarB = document.createElement('button');
+            addToCalendarB.classList.add('btn btn-sharp');
+	        addToCalendarB.appendChild(document.createTextNode("Add to Calendar"));
+			document.body.appendChild(addToCalendarB);
 	    });
 	};
 });

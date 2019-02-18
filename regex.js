@@ -472,6 +472,7 @@ console.log();
 
 var addEvents = [];
 var week1Monday = new Date('January 01, 2000');
+//console.log(week1Monday);
 
 
 week1Monday.setDate(week1Monday.getDate() + 1);
