@@ -135,7 +135,7 @@ window.addEventListener('load', function load(event) {
 
 
             let addToCalendarB = document.createElement('button');
-            addToCalendarB.classList.add('btn btn-sharp');
+            //addToCalendarB.classList.add('btn btn-sharp');
             addToCalendarB.appendChild(document.createTextNode("Add to Calendar"));
             document.body.appendChild(addToCalendarB);
         });
