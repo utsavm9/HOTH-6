@@ -18,6 +18,25 @@
     border-color: #007bff !important;
 }
 
+.btn-sharp2 {
+    margin: 10px !important;
+    border-radius: 0px !important;
+    border: 1px solid !important;
+    font-family: 'Open Sans', sans-serif !important;
+    color: #218838;
+    background-color: transparent;
+    background-image: none;
+    border-color: #218838;
+    width: 100%
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-sharp2:hover {
+    background-color: #218838;
+    color: white !important;
+    border-color: #218838 !important;
+}
+
 kbd {
     font-size: 18px;
     margin-bottom: 7px;
