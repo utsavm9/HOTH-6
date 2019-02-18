@@ -1,4 +1,5 @@
 
+
 window.addEventListener('load', function load(event) {
     document.getElementById('scanbutton').onclick = function () {
 		console.log("Popup DOM fully loaded and parsed");
@@ -7,8 +8,9 @@ window.addEventListener('load', function load(event) {
 	        //You can play with your DOM here or check URL against your regex
 	        console.log('Tab script:');
 	        console.log(document.body);
-	        if(document.URL === "https://be.my.ucla.edu/studylist.aspx")
+	        if(document.URL === "https://be.my.ucla.edu/studylist.aspx"){
 		        return document.getElementById("div_landing").innerHTML;
+	        }
 		    else{
 		    	return("Invalid Website. Please go to https://be.my.ucla.edu/studylist.aspx to use.");
 		    }
@@ -21,6 +23,10 @@ window.addEventListener('load', function load(event) {
 	        //Here we have just the innerHTML and not DOM structure
 	        console.log('Popup script:')
 	        alert(results[0]);
+	        let element = document.createElement('button');
+	        element.appendChild(document.createTextNode("Add to Calendar"));
+			document.body.appendChild(element);
 	    });
 	};
 });
+
