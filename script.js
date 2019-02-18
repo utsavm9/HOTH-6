@@ -132,7 +132,7 @@ window.addEventListener('load', function load(event) {
 
             console.log(courseInfo);
             alert(courseInfo);
-            document.body.appendChild(document.createTextNode("Click to see extracted information:"));
+            document.getElementById('pasteHere').(document.createTextNode("Click to see extracted information:"));
 
             var list = document.createElement('ul');
             courseInfo.forEach((e) => {
@@ -153,12 +153,13 @@ window.addEventListener('load', function load(event) {
 
             let addToCalendarB = document.createElement('button');
             addToCalendarB.className += " btn btn-sharp2";
-            addToCalendarB.appendChild(document.createTextNode("Add to Calendar"));
-
             
-            var att = document.createAttribute("href"); 
-            att.value = `https://calendar.google.com/calendar/r/eventedit?text=Computer+Science+32&dates=20190108T063000Z/20190108T075000Z&details=Lec+-+MW+|+Dis+-+F&location=Boelter+Hall,+CA+90024`;                           // Set the value of the class attribute
-            addToCalendarB.setAttributeNode(att);
+            let alink = document.createElement('a');
+            var atttttr = document.createAttribute("href").value=`https://calendar.google.com/calendar/r/eventedit?text=Computer+Science+32&dates=20190108T063000Z/20190108T075000Z&details=Lec+-+MW+|+Dis+-+F&location=Boelter+Hall,+CA+90024`;
+            alink.setAttribute(atttttr);
+            alink.createTextNode("Add to Calendar")
+            
+            addToCalendarB.appendChild(alink);
 
             document.body.appendChild(addToCalendarB);
 
