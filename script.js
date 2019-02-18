@@ -125,7 +125,7 @@ window.addEventListener('load', function load(event) {
                     LecTimeL: e.LecTime.substr(regexLT.index + 1, 10),
                     DisTimeS: e.DisTime.substr(0, regexDT.index),
                     DisTimeL: e.DisTime.substr(regexDT.index + 1, 10),
-                    //FinalTime : e.FinalTime,
+                    FinalTime : e.FinalTime,
                 };
             })
 
@@ -141,7 +141,9 @@ window.addEventListener('load', function load(event) {
                 
                 tagSubject.onclick = function () {
                     
-                    alert(e.title + ":\n" + "sss");
+                    alert(e.title + ":\n" + "Lecture information: " + e.locationLec
+                    + "\nTime: " + e.LecDays + " at " + e.LecTimeS + "-" + e.LecTimeL + "\nDiscussion Information: "
+                    + e.locationDis + "\nTime: " + e.DisDays + " at " + e.DisTimeS + "-" + e.DisTimeL);
 
                 }
                 list.appendChild(tagSubject)
