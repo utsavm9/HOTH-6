@@ -132,7 +132,7 @@ window.addEventListener('load', function load(event) {
 
             console.log(courseInfo);
             alert(courseInfo);
-            document.getElementById('pasteHere').(document.createTextNode("Click to see extracted information:"));
+            document.getElementById('pasteHere').appendChild(document.createTextNode("Click to see extracted information:"));
 
             var list = document.createElement('ul');
             courseInfo.forEach((e) => {
