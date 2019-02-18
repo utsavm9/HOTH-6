@@ -132,6 +132,7 @@ window.addEventListener('load', function load(event) {
 
             console.log(courseInfo);
             //alert(courseInfo);
+            document.getElementById('pasteHere').appendChild(document.createTextNode(" "));
             document.getElementById('pasteHere').appendChild(document.createTextNode("Click to see extracted information:"));
 
             var list = document.createElement('ul');
@@ -150,7 +151,7 @@ window.addEventListener('load', function load(event) {
             })
 
             document.getElementById('pasteHere').appendChild(list);
-
+            document.getElementById('DaButton').style.visibility = true;
             // let addToCalendarB = document.createElement('button');
             // addToCalendarB.className += " btn btn-sharp2";
             
