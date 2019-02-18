@@ -151,11 +151,11 @@ window.addEventListener('load', function load(event) {
 
             document.body.appendChild(list);
 
-            let addToCalendarB = document.createElement('button');
-            addToCalendarB.className += " btn btn-sharp2";
-            addToCalendarB.appendChild(document.createTextNode("Add to Calendar"));
-            document.body.appendChild(addToCalendarB);
-            document.body.appendChild(document.createTextNode(""));
+            // let addToCalendarB = document.createElement('button');
+            // addToCalendarB.className += " btn btn-sharp2";
+            // addToCalendarB.appendChild(document.createTextNode("Add to Calendar"));
+            // document.body.appendChild(addToCalendarB);
+            // document.body.appendChild(document.createTextNode(""));
         });
     };
 });
