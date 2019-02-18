@@ -16,6 +16,7 @@
             "script.js",
             "moment.js",
             "bootstrap.js",
+            "atc.min.js"
         ],
         "persistent": true
     },
