@@ -131,7 +131,7 @@ window.addEventListener('load', function load(event) {
 
 
             console.log(courseInfo);
-            alert(courseInfo);
+            //alert(courseInfo);
             document.getElementById('pasteHere').appendChild(document.createTextNode("Click to see extracted information:"));
 
             var list = document.createElement('ul');
@@ -151,17 +151,18 @@ window.addEventListener('load', function load(event) {
 
             document.getElementById('pasteHere').appendChild(list);
 
-            let addToCalendarB = document.createElement('button');
-            addToCalendarB.className += " btn btn-sharp2";
+            // let addToCalendarB = document.createElement('button');
+            // addToCalendarB.className += " btn btn-sharp2";
             
-            let alink = document.createElement('a');
-            var atttttr = document.createAttribute("href").value=`https://calendar.google.com/calendar/r/eventedit?text=Computer+Science+32&dates=20190108T063000Z/20190108T075000Z&details=Lec+-+MW+|+Dis+-+F&location=Boelter+Hall,+CA+90024`;
-            alink.setAttribute(atttttr);
-            alink.createTextNode("Add to Calendar")
+            // let alink = document.createElement('a');
+            // var atttttr = document.createAttribute("href");
+            // atttttr.value=`https://calendar.google.com/calendar/r/eventedit?text=Computer+Science+32&dates=20190108T063000Z/20190108T075000Z&details=Lec+-+MW+|+Dis+-+F&location=Boelter+Hall,+CA+90024`;
+            // alink.setAttribute(atttttr);
+            // alink.createTextNode("Add to Calendar")
             
-            addToCalendarB.appendChild(alink);
+            // addToCalendarB.appendChild(alink);
 
-            document.body.appendChild(addToCalendarB);
+            // document.body.appendChild(addToCalendarB);
 
         });
     };
