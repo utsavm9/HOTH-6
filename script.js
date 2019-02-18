@@ -151,7 +151,7 @@ window.addEventListener('load', function load(event) {
             })
 
             document.getElementById('pasteHere').appendChild(list);
-            document.getElementById('DaButton').style.visibility = true;
+            document.getElementById('DaButton').style.display = 'block';
             // let addToCalendarB = document.createElement('button');
             // addToCalendarB.className += " btn btn-sharp2";
             
