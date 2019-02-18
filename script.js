@@ -132,6 +132,11 @@ window.addEventListener('load', function load(event) {
             console.log(courseInfo);
             alert(courseInfo);
 
+            courseInfo.forEach((e) => {
+                let tagSubject = document.createElement('kbd');
+                tagSubject.appendChild(document.createTextNode(e.title));
+                document.body.appendChild(tagSubject)
+            })
 
 
             let addToCalendarB = document.createElement('button');
