@@ -132,12 +132,14 @@ window.addEventListener('load', function load(event) {
             console.log(courseInfo);
             alert(courseInfo);
 
+            var list = document.createElement('ul');
             courseInfo.forEach((e) => {
-                let tagSubject = document.createElement('kbd');
+                let tagSubject = document.createElement('li');
                 tagSubject.appendChild(document.createTextNode(e.title));
-                document.body.appendChild(tagSubject)
+                list.appendChild(tagSubject)
             })
 
+            document.body.appendChild(list);
 
             let addToCalendarB = document.createElement('button');
             addToCalendarB.className += " btn btn-sharp";
