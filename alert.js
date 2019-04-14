@@ -1,1 +1,1 @@
-alert('hello ' + document.location.href);
+alert('hello' + document.location.href);
