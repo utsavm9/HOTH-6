@@ -13,7 +13,7 @@ window.addEventListener('load', function load(event) {
                 return document.getElementById("div_landing").innerHTML;
             }
             else {
-                alert ("Invalid Website. Please go to https://be.my.ucla.edu/studylist.aspx to use.");
+                alert("Invalid Website. Please go to https://be.my.ucla.edu/studylist.aspx to use.");
             }
         }
 
@@ -154,13 +154,13 @@ window.addEventListener('load', function load(event) {
             document.getElementById('DaButton').style.display = 'block';
             // let addToCalendarB = document.createElement('button');
             // addToCalendarB.className += " btn btn-sharp2";
-            
+
             // let alink = document.createElement('a');
             // var atttttr = document.createAttribute("href");
             // atttttr.value=`https://calendar.google.com/calendar/r/eventedit?text=Computer+Science+32&dates=20190108T063000Z/20190108T075000Z&details=Lec+-+MW+|+Dis+-+F&location=Boelter+Hall,+CA+90024`;
             // alink.setAttribute(atttttr);
             // alink.createTextNode("Add to Calendar")
-            
+
             // addToCalendarB.appendChild(alink);
 
             // document.body.appendChild(addToCalendarB);
