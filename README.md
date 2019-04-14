@@ -11,7 +11,7 @@ Currently this app is only available as a Chrome extension but it does not have 
 
 The extension with its logo would have now appeared on the toolbar. To use it:
 
-* Go to your UCLA Course Schedule.
+* Go to your [UCLA Course Schedule](https://be.my.ucla.edu/studylist.aspx).
 * Click on the extension logo and then click on `Extract Schedule To Calendar`. A list of the course names for whom the time has been extraction will appear. 
 * Click on `Add to Calendar` to be redirected to Google Calendar page with pre-filled values.
 
